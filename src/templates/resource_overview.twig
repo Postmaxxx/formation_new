@@ -1,0 +1,17 @@
+{% extends "_layout.twig" %}
+
+{% set pageTitle = 'Resources Overview' %}
+{% set pageClass = 'Resources_overview' %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="container">
+    {% include "components/_resources-menu-top.twig" %}
+  </div>
+  
+{% endblock %}
+
+
+{% block scripts %}
+<script type="module" src="/assets/js/partials/resources.min.js"></script>
+{% endblock %}
