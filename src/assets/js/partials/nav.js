@@ -1,9 +1,13 @@
 const nav = document.querySelector(".nav");
+const mobileNav = document.querySelector(".mobile-nav");
 const menus = document.querySelectorAll(".nav__items");
 const arrows = document.querySelectorAll(".nav-arrow");
 const subMenus = document.querySelectorAll(".nav-sub");
+const mobileSubMenus = mobileNav.querySelectorAll(".mobile-nav-sub");
 const subMenuCompany = nav.querySelector(".nav-sub_company");
+const mobileSubMenuCompany = mobileNav.querySelector(".mobile-nav-sub_company");
 const subMenuResources = nav.querySelector(".nav-sub_resources");
+const mobileSubMenuResources = mobileNav.querySelector(".mobile-nav-sub_resources");
 let state = {
     nav: {
         activeItem: "",
@@ -13,13 +17,21 @@ let state = {
 
 
 function redrawSubNav(submenuToShow) {
-    subMenus.forEach(el => el.style.transform = `scaleY(0)`);
-        if (submenuToShow === "company") {
-            subMenuCompany.style.transform = `scaleY(1)`;
-        }
-        if (submenuToShow === "resources") {
-            subMenuResources.style.transform = `scaleY(1)`;
-        }
+    console.log(mobileNav);
+    subMenus.forEach((menu) => {
+        menu.style.transform = `scaleY(0)`;
+    })
+    mobileSubMenus.forEach((menu) => {
+        menu.style.maxHeight = `0`;
+    })
+    if (submenuToShow === "company") {
+        subMenuCompany.style.transform = `scaleY(1)`;
+        mobileSubMenuCompany.style.maxHeight = `500px`;
+    }
+    if (submenuToShow === "resources") {
+        subMenuResources.style.transform = `scaleY(1)`;
+        mobileSubMenuResources.style.height = `auto`;
+    }
 
 }
 
@@ -55,7 +67,6 @@ menus.forEach((menu) => {
             e.target.parentNode.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.parentNode.dataset.item;
         }
         redrawNav(state.nav.activeItem)
-        //console.log(state.nav.activeItem);
     })
 })
 
