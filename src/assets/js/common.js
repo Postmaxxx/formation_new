@@ -174,7 +174,7 @@
 
 		$('.hamburger-menu').on('click', function(){
 			$(this).toggleClass('is-active');
-			$('.mobile-menu').toggleClass('is-open');
+			$('.mobile-nav').toggleClass('is-open');
 			$('body').toggleClass('blocked');
 		});
 

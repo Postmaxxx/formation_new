@@ -86,7 +86,7 @@
 
 .hamburger-menu {
   cursor: pointer;
-  height: 12px;
+  height: 50px;
   z-index: 11;
   display: none;
 
@@ -130,16 +130,16 @@
       transition-delay: 0.2s, 0s;
     }
 
-    &:before { margin-top: -5px; }
-    &:after { margin-top: 5px; }
+    &:before { margin-top: -10px; }
+    &:after { margin-top: 10px; }
   }
 
   span,
   span:before,
   span:after {
-    width: 20px;
-    height: 2px;
-    background-color: $black;
+    width: 30px;
+    height: 3px;
+    background-color: $nav-color;
     display: block;
   }
 }

@@ -26,6 +26,14 @@ header {
         @include respond-to(lg) {
             width: 130px;
           }
+
+        @include respond-to(md) {
+         width: 100px;
+        }
+
+        @include respond-to(sm) {
+            width: 220px;
+           }
     }
 
     & .request-btn {
@@ -42,6 +50,15 @@ header {
         @include respond-to(lg) {
             width: 110px;
             font-size: 14px;
+        }
+
+        @include respond-to(md) {
+            width: 90px;
+            font-size: 11px;
+        }
+
+        @include respond-to(sm) {
+            display: none;
         }
     }
 }

@@ -1,7 +1,7 @@
 const nav = document.querySelector(".nav");
-const menu = document.querySelector(".nav__items");
-const arrows = menu.querySelectorAll(".nav-arrow");
-const subMenus = menu.querySelectorAll(".nav-sub");
+const menus = document.querySelectorAll(".nav__items");
+const arrows = document.querySelectorAll(".nav-arrow");
+const subMenus = document.querySelectorAll(".nav-sub");
 const subMenuCompany = nav.querySelector(".nav-sub_company");
 const subMenuResources = nav.querySelector(".nav-sub_resources");
 let state = {
@@ -47,16 +47,17 @@ function redrawNav(selected) {
 
 
 
-menu.addEventListener("click", (e) => {
-    if (e.target.dataset.item) {
-        e.target.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.dataset.item;
-    } else {
-        e.target.parentNode.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.parentNode.dataset.item;
-    }
-    redrawNav(state.nav.activeItem)
+menus.forEach((menu) => {
+    menu.addEventListener("click", (e) => {
+        if (e.target.dataset.item) {
+            e.target.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.dataset.item;
+        } else {
+            e.target.parentNode.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.parentNode.dataset.item;
+        }
+        redrawNav(state.nav.activeItem)
+        //console.log(state.nav.activeItem);
+    })
 })
-
-
 
 
 
