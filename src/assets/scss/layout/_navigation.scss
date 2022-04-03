@@ -195,6 +195,29 @@
   overflow: auto;
   transition: $transitionMenu;
 
+/* width */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 5px grey; 
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #8F8F8F; 
+    border-radius: 6px;
+    height: 30px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #7F7F7F
+  }
 
   &.is-open {
     display: block;

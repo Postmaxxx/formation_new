@@ -21,7 +21,6 @@ let state = {
 
 
 function redrawSubNav(submenuToShow) {
-    console.log(mobileSubMenuResources);
     subMenus.forEach((menu) => {
         menu.style.transform = `scaleY(0)`;
     })
