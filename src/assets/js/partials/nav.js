@@ -8,6 +8,10 @@ const subMenuCompany = nav.querySelector(".nav-sub_company");
 const mobileSubMenuCompany = mobileNav.querySelector(".mobile-nav-sub_company");
 const subMenuResources = nav.querySelector(".nav-sub_resources");
 const mobileSubMenuResources = mobileNav.querySelector(".mobile-nav-sub_resources");
+const mobileCompanyHeader = mobileNav.querySelector(".mobile-nav__link_company");
+const mobileResourcesHeader = mobileNav.querySelector(".mobile-nav__link_resources");
+
+
 let state = {
     nav: {
         activeItem: "",
@@ -17,20 +21,24 @@ let state = {
 
 
 function redrawSubNav(submenuToShow) {
-    console.log(mobileNav);
+    console.log(mobileSubMenuResources);
     subMenus.forEach((menu) => {
         menu.style.transform = `scaleY(0)`;
     })
     mobileSubMenus.forEach((menu) => {
         menu.style.maxHeight = `0`;
     })
+    mobileCompanyHeader.style.borderBottom = `none`;
+    mobileResourcesHeader.style.borderBottom = `none`;
     if (submenuToShow === "company") {
         subMenuCompany.style.transform = `scaleY(1)`;
         mobileSubMenuCompany.style.maxHeight = `500px`;
+        mobileCompanyHeader.style.borderBottom = `3px solid #636363`;
     }
     if (submenuToShow === "resources") {
         subMenuResources.style.transform = `scaleY(1)`;
-        mobileSubMenuResources.style.height = `auto`;
+        mobileSubMenuResources.style.maxHeight = `1000px`;
+        mobileResourcesHeader.style.borderBottom = `3px solid #636363`;
     }
 
 }
@@ -49,10 +57,12 @@ function redrawNav(selected) {
     redrawSubNav(selected);
     if (state.nav.type === 'sticky' ) {
         nav.parentNode.classList.add('sticky');
-        subMenus.forEach(el => el.classList.add('sticky'))
+        subMenus.forEach(el => el.classList.add('sticky'));
+        mobileNav.classList.add('sticky');
     } else {
         nav.parentNode.classList.remove('sticky'); 
-        subMenus.forEach(el => el.classList.remove('sticky'))
+        subMenus.forEach(el => el.classList.remove('sticky'));
+        mobileNav.classList.remove('sticky');
     } 
 
 }
