@@ -1,0 +1,105 @@
+.resources__search {
+    height: 92px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'HelveticaNeueCyr';
+        width: 516px;
+
+        &__item {
+
+            & span {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 49px;
+                color: #000000;
+            }
+
+            & .filter__arrow {
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid $nav-color;
+                border-top: 2px solid $nav-color;
+                display: block;      
+                display: inline-block;
+                transform: rotate(225deg);
+                margin-left: 3px;
+                cursor: pointer;
+                transition: $transitionMenu;
+
+                &.filter__arrow_selected {
+                    transform: rotate(225deg) scale(-1, -1);
+                }
+            }
+
+            & .filter__sub {
+                //border: 2px solid blue;
+                width: 100%;
+                padding: 8px 0;
+                position: absolute;
+                left: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: $transitionResourcesFilter;
+
+
+                &.filter__sub_selected {
+                    max-height: 300px;
+                    transition: $transitionResourcesFilter;
+                }
+
+                & .filter__wrapper {
+                    max-width: 1150px;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    & .filter__sub__item {
+                        border: 1px solid #000;
+                        border-radius: 100px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 37px;
+                        padding: 0 30px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 49px;
+                        color: #000000;
+                        margin: 20px 40px;
+                        cursor: pointer;
+    
+                        &:hover {
+                            background-color: #3361BB;
+                        }
+
+                        &.filter__sub__item_selected {
+                            background-color: #3361BB;
+                        }
+                        
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__search-cont {
+        width: 441px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+}
+
+
