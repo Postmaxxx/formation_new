@@ -50,7 +50,7 @@ menu.addEventListener('mouseover', (e) => {
 
 
 menu.addEventListener('mouseout', (e) => {
-    //state.resources.menu.hoveredItem = ""
+    state.resources.menu.hoveredItem = ""
     changeMenuStyles();
 })
 
