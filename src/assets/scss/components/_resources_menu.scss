@@ -34,11 +34,15 @@
         }
 
         & p {
-            display: none;
+            //display: none;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 27px;
+            //transform: scaleX(0);
+            //max-width: 0px;
+            transition: $transitionResourcesMenu; //!!!
+
         }
 
         & div {
@@ -69,8 +73,10 @@
             } 
 
             & p {
-                color: rgba(51, 51, 51, 0.8);
-                width: 190px;
+                color: transparent;
+                max-width: 0px;
+                //color: rgba(51, 51, 51, 0.8);
+                //max-width: 0px;
             }
         }
 
@@ -83,8 +89,10 @@
             }
             
             & p {
-                color: rgba(255, 255, 255, 0.8);
-                width: 192px;
+                color: transparent;
+                max-width: 0px;
+                //color: rgba(255, 255, 255, 0.8);
+                //width: 192px;
             }
         }
 
@@ -97,8 +105,10 @@
             }
 
             & p {
-                color: rgba(255, 255, 255, 0.8);
-                width: 195px;
+                color: transparent;
+                max-width: 0px;
+                //color: rgba(255, 255, 255, 0.8);
+                //width: 195px;
             }
         }
 
@@ -112,7 +122,9 @@
     
             & p {
                 margin-right: 33px;
-                display: inline-block;
+                //display: inline-block;
+                transition: $transitionResourcesMenu; //!!!
+                max-width: 3000px;
             }
 
             & div {
@@ -122,14 +134,31 @@
 
             &.resources__menu__item_modernize {
                 background-image: url('../img/resources__modernize__icon_big.png');
+
+                & p {
+                    color: rgba(51, 51, 51, 0.8);
+                    width: 190px;
+                }
+            
             }
     
             &.resources__menu__item_offers {
                 background-image: url('../img/resources__offers__icon_big.png');
+
+                & p {
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 192px;
+                }
             }
     
             &.resources__menu__item_future {
                 background-image: url('../img/resources__future__icon_big.png');
+
+                & p {
+                    color: rgba(255, 255, 255, 0.8);
+                    width: 195px;
+                }
+                
             }
         }
 
