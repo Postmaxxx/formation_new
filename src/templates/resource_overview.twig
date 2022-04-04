@@ -2,6 +2,29 @@
 
 {% set pageTitle = 'Resources Overview' %}
 {% set pageClass = 'Resources_overview' %}
+{% set articles_modernize = {
+  main_header = "How to Modernize Loyalty Offers",
+  link_to = "http://google.com",
+  articles = [
+    {
+      link_to_img: "../assets/img/resources__modernize__1.png",
+      article_header: "Title of Resource 1",
+      article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit rerum modi. Rem similique fugiat cum iure numquam est quas nulla sit." 
+    },
+    {
+      link_to_img: "../assets/img/resources__modernize__2.png",
+      article_header: "Title of Resource 2",
+      article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
+    },
+    {
+      link_to_img: "../assets/img/resources__modernize__3.png",
+      article_header: "Title of Resource 3",
+      article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
+    },
+  ]
+} %}
+
+
 
 {% block content %}
   {% include "partials/_header.html" %}
@@ -9,7 +32,12 @@
     {% include "components/_resources-menu-top.twig" %}
     {% include "components/_resources-search.twig" %}
   </div>
-  
+  <section class="resources__section">
+    <div class="container">
+      {% include "components/_resources-block.twig" %}
+    </div>
+  </section>
+
 {% endblock %}
 
 
