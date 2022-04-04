@@ -34,14 +34,12 @@
         }
 
         & p {
-            //display: none;
+            width: 0;
             font-style: normal;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 0px;
             line-height: 27px;
-            //transform: scaleX(0);
-            //max-width: 0px;
-            transition: $transitionResourcesMenu; //!!!
+            transition: $transitionResourcesMenu;
 
         }
 
@@ -73,10 +71,7 @@
             } 
 
             & p {
-                color: transparent;
-                max-width: 0px;
-                //color: rgba(51, 51, 51, 0.8);
-                //max-width: 0px;
+                color: rgba(51, 51, 51, 0.8);
             }
         }
 
@@ -89,10 +84,7 @@
             }
             
             & p {
-                color: transparent;
-                max-width: 0px;
-                //color: rgba(255, 255, 255, 0.8);
-                //width: 192px;
+                color: rgba(255, 255, 255, 0.8);
             }
         }
 
@@ -105,10 +97,7 @@
             }
 
             & p {
-                color: transparent;
-                max-width: 0px;
-                //color: rgba(255, 255, 255, 0.8);
-                //width: 195px;
+                color: rgba(255, 255, 255, 0.8);
             }
         }
 
@@ -122,9 +111,9 @@
     
             & p {
                 margin-right: 33px;
-                //display: inline-block;
-                transition: $transitionResourcesMenu; //!!!
-                max-width: 3000px;
+                display: inline-block;
+                font-size: 18px;
+                transition: $transitionResourcesMenu;
             }
 
             & div {
@@ -136,17 +125,14 @@
                 background-image: url('../img/resources__modernize__icon_big.png');
 
                 & p {
-                    color: rgba(51, 51, 51, 0.8);
                     width: 190px;
                 }
-            
             }
     
             &.resources__menu__item_offers {
                 background-image: url('../img/resources__offers__icon_big.png');
 
                 & p {
-                    color: rgba(255, 255, 255, 0.8);
                     width: 192px;
                 }
             }
@@ -155,10 +141,8 @@
                 background-image: url('../img/resources__future__icon_big.png');
 
                 & p {
-                    color: rgba(255, 255, 255, 0.8);
                     width: 195px;
                 }
-                
             }
         }
 
