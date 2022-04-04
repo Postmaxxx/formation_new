@@ -1,0 +1,44 @@
+.formation-works {
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+
+    &__text-area {
+
+        .formation-works__header {
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 70px;
+        }
+    
+        .formation-works__text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 38px;
+            color: #333333;
+            max-width: 585px;
+            margin-top: 25px;
+        }
+    }
+
+
+    &__arrow {
+        width: 150px;
+        height: 60px;
+        transform: rotate(7.7deg);
+    }
+
+    &__button {
+        width: 277px;
+        height: 83px;
+        background: #FFFFFF;
+        margin-left: 51px;
+        margin-right: 56px;
+        margin-top: 48px;
+    }
+
+}

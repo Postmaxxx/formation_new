@@ -1,25 +1,17 @@
 <div class="resources__block">
-    <h2 class="resources__block__header">How to Modernize Loyalty Offers</h2>
-    <a href="#" class="resources__block__link">Read More &#8594</a>
+    <h2 class="resources__block__header">{{ block.main_header }}</h2>
+    <a href={{ block.link_to }} class="resources__block__link">Read More &#8594</a>
     <div class="resources__block__content">
         <div class="resources__block__content__left">
-            {% include "./_resources-block-item.twig" %}
+            {% include "./_resources-block-item.twig" with {article: block.articles[0]} %} 
         </div>
         <div class="resources__block__content__right">
-            {% include "./_resources-block-item.twig" %}
-            {% include "./_resources-block-item.twig" %}
+            {% include "./_resources-block-item.twig" with {article: block.articles[1]} %}
+            {% include "./_resources-block-item.twig" with {article: block.articles[2]} %}
         </div>
     </div>
 </div>
 
-
-<!--
-                <img src="../assets/img/resources__modernize__1.png" alt="1" class="resources__block__img">
-            <h3 class="resources__block__content__header">Title of Resource</h3>
-            <p class="resources__block__content__text">Lorem ipsum dolor sit amet. Rem similique fugiat 
-                cum iure numquam est quas nulla sit rerum modi. Rem similique fugiat cum iure numquam 
-                est quas nulla sit.</p>
--->
 
 
     

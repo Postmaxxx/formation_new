@@ -1,15 +1,6 @@
-.resources__section {
-    width: 100%;
-    background-color: $orange;
-    border-top: 1px solid #000;
-    padding-bottom: 120px;
-
-}
-
-
 .resources__block {
     margin-top: 100px;
-    border: 1px solid red;
+    //border: 1px solid red;
     font-family: 'HelveticaNeueCyr';
     color: #000000;
     font-style: normal;
@@ -31,7 +22,7 @@
     }
 
     &__content {
-        border: 1px solid green;
+        //border: 1px solid green;
         margin-top: 55px;
         width: 100%;
         display: flex;
@@ -56,7 +47,7 @@
 
         &__left {
             width: 60%;
-            border: 1px solid blue;
+            //border: 1px solid blue;
             
 
             & h3 {
@@ -72,7 +63,7 @@
 
         &__right {
             width: 35%;
-            border: 1px solid red;
+            //border: 1px solid red;
 
             & h3 {
                 font-size: 20px;

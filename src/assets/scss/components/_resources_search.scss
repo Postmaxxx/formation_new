@@ -41,6 +41,11 @@
             }
 
             & .filter__sub {
+                background: #FFFFFF;
+                box-shadow: none;
+                opacity: 0.97;
+                margin-top: 0px;
+
                 //border: 2px solid blue;
                 width: 100%;
                 padding: 8px 0;
@@ -48,12 +53,15 @@
                 left: 0;
                 max-height: 0;
                 overflow: hidden;
-                //transition: $transitionResourcesFilter;
+                transition: $transitionResourcesFilter;
 
 
                 &.filter__sub_selected {
                     max-height: 300px;
                     transition: $transitionResourcesFilter;
+                    box-shadow: 4px 4px 4px rgba(117, 117, 117, 0.25);
+                    margin-top: 23px;
+
                 }
 
                 & .filter__wrapper {
@@ -80,11 +88,12 @@
                         margin: 20px 40px;
                         cursor: pointer;
     
-                        &:hover {
-                            background-color: #3361BB;
-                        }
 
                         &.filter__sub__item_selected {
+                            background-color: #4643f1;
+                        }
+
+                        &:hover {
                             background-color: #3361BB;
                         }
                         
