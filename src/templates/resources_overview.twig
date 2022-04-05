@@ -5,7 +5,7 @@
 {% set resource_blocks = {
   modernize: {
     main_header: "How to Modernize Loyalty Offers",
-    link_to: "http://google.com",
+    link_to: "resources_theme.html",
     articles: [
       {
         link_to_img: "../assets/img/resources__modernize__1.png",
@@ -94,5 +94,6 @@
  
 
 {% block scripts %}
-<script type="module" src="/assets/js/partials/resources.min.js"></script>
+  <script type="module" src="/assets/js/partials/resources_menu.min.js"></script>
+  <script type="module" src="/assets/js/partials/resources_filter.min.js"></script>
 {% endblock %}

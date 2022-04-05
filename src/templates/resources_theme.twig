@@ -1,0 +1,88 @@
+{% extends "_layout.twig" %}
+
+{% set pageTitle = 'Resources Theme' %}
+{% set pageClass = 'Resources_theme' %}
+{% set resource_blocks = {
+  modernize: {
+    main_header: "How to Modernize Loyalty Offers",
+    articles: [
+      {
+        link_to_img: "../assets/img/resources__modernize__1.png",
+        article_header: "Title of Resource 1",
+        article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit rerum modi. Rem similique fugiat cum iure numquam est quas nulla sit." 
+      },
+      {
+        link_to_img: "../assets/img/resources__modernize__2.png",
+        article_header: "Title of Resource 2",
+        article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
+      },
+      {
+        link_to_img: "../assets/img/resources__modernize__3.png",
+        article_header: "Title of Resource 3",
+        article_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
+      },
+    ]
+  }
+
+} %}
+
+
+{% set resource_previews = [
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 1",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 2",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 3",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 4",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 5",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 6",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 7",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 8",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  { resource_img: "../assets/img/resources__preview__blank.png",
+    resource_header: "Title of Resource 9",
+    resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." },
+  ]
+ %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  <div class="container">
+    {% include "components/_resources__block_hero.twig" with {block: resource_blocks.modernize} %}
+  </div>
+  <div class="container">
+    {% include "components/_resources-search.twig" %}
+  </div>
+
+  
+  <section class="resources_theme__preview">
+    <div class="container">
+      {% include "components/_resources__previews.twig" with {previews: resource_previews} %}
+      </div>
+  </section>
+  
+  
+  <section class="formation-works__section">
+    <div class="container">
+      {% include "components/_formation-works.twig" %}
+    </div>
+  </section>
+{% endblock %}
+ 
+
+{% block scripts %}
+  <script type="module" src="/assets/js/partials/resources_filter.min.js"></script>
+{% endblock %}
