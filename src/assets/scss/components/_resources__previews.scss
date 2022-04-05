@@ -1,8 +1,47 @@
- .resources__preview {
+.resources__preview {
      width: 100%;
      display: flex;
      align-items: flex-start;
      justify-content: space-between;
      flex-wrap: wrap;
      border: 3px solid red;
- }
+
+     &__item {
+         width: 30%;
+         margin-top: 80px;
+
+         & img {
+            width: 100%;
+            cursor: pointer;
+         }
+
+         & h3 {
+             margin-top: 18px;
+             font-weight: 700;
+            font-size: 20px;
+            line-height: 37px;
+         }
+
+         & p {
+             margin-top: 8px;
+             font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+         }
+         
+     }
+
+}
+
+
+.resources__preview__pages {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

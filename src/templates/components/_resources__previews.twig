@@ -1,6 +1,10 @@
 <div class="resources__preview">
     {% for preview in previews %}
-        {% include "./_resources-block-item.twig" with {article: preview} %}
-
+    <div class="resources__preview__item">
+        {% include "./_resources-block-item.twig" with {resource: preview} %}
+    </div>
     {% endfor %}
+</div>
+<div class="resources__preview__pages">
+ds
 </div>
