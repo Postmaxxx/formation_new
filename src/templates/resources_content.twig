@@ -1,35 +1,15 @@
 {% extends "_layout.twig" %}
 
-{% set pageTitle = 'Resources Theme' %}
-{% set pageClass = 'Resources_theme' %}
-{% set resource_blocks = {
-  modernize: {
-    main_header: "How to Modernize Loyalty Offers 2",
-    link_to: "resources_theme.html",
-    resources: [
-      {
-        resource_id: "011",
-        link_to_img: "../assets/img/resources__modernize__1.png",
-        resource_header: "Title of Resource 1",
-        resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit rerum modi. Rem similique fugiat cum iure numquam est quas nulla sit." 
-      },
-      {
-        resource_id: "012",
-        link_to_img: "../assets/img/resources__modernize__2.png",
-        resource_header: "Title of Resource 2",
-        resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
-      },
-      {
-        resource_id: "013",
-        link_to_img: "../assets/img/resources__modernize__3.png",
-        resource_header: "Title of Resource 3",
-        resource_text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit." 
-      },
-    ]
-  }
+{% set pageTitle = 'Resources Content' %}
+{% set pageClass = 'Resources_content' %}
 
+
+{% set resource_content = {
+    topic: "Case Studies",
+    link_to_img: "../assets/img/case_studies.png",
+    header: "Starbucks Loyalty Program",
+    text: "Lorem ipsum dolor sit amet. Rem similique fugiat cum iure numquam est quas nulla sit rerum modi. Rem similique fugiat cum iure numquam est quas nulla sit."
 } %}
-
 
 
 
@@ -92,7 +72,7 @@
 {% block content %}
   {% include "partials/_header.html" %}
   <div class="container">
-    {% include "components/_resources__block_hero.twig" with {block: resource_blocks.modernize} %}
+    {% include "components/_resources__block_content.twig" with {content: resource_content} %}
   </div>
   <div class="container">
     {% include "components/_resources-search.twig" %}
@@ -102,7 +82,7 @@
   <section class="resources_theme__preview">
     <div class="container">
       {% include "components/_resources__previews.twig" with {previews: resource_previews.previews, pagesTotal: resource_previews.totalPages, currentPage: resource_previews.currentPage} %}
-      </div>
+    </div>
   </section>
   
   

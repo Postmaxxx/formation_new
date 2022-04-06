@@ -18,7 +18,7 @@ let state = {
 
 
 function changeCategory() {
-    console.log(state.resources.filter.category);
+    //console.log(state.resources.filter.category);
     filterArrows.forEach((arrow) => {
         if (arrow.parentNode.dataset.category === state.resources.filter.category) {
             arrow.classList.add("filter__arrow_selected")

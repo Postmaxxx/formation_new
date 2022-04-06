@@ -1,0 +1,48 @@
+.resources__block_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000000;        
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    //border: 3px solid black;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 70px;
+
+    &__topic {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 91px;
+        width: 25%;
+    }
+
+    &__line {
+        width: 1px;
+        height: 232px;
+        border: 1px solid black;
+    }
+
+    &__img {
+        width: 33%;;
+    }
+
+    &__text-block {
+        width: 30%;
+
+        & h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 45px;
+        }
+
+        & p {
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+}

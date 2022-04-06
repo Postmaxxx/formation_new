@@ -1,3 +1,4 @@
+const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const mobileNav = document.querySelector(".mobile-nav");
 const menus = document.querySelectorAll(".nav__items");
@@ -38,6 +39,11 @@ function redrawSubNav(submenuToShow) {
         subMenuResources.style.transform = `scaleY(1)`;
         mobileSubMenuResources.style.maxHeight = `1000px`;
         mobileResourcesHeader.style.borderBottom = `3px solid #636363`;
+    }
+    if (submenuToShow) {
+        header.classList.add("header_submenu");
+    } else {
+        header.classList.remove("header_submenu");
     }
 
 }

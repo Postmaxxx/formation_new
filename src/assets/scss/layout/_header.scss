@@ -1,9 +1,13 @@
 header {
-    border-bottom: 1px solid black;
+    border-bottom: none;
     position: sticky;
     top: 0;
     background-color: #FFF;
-    z-index: 9999;
+    z-index: 9999 !important;
+
+    &.header_submenu {
+        border-bottom: 1px solid black;
+    }
 }
 
 .header-content {
@@ -14,6 +18,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
     transition: height $transitionMenu;
+
 
     &.sticky {
         height: 70px;
