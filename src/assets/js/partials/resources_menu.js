@@ -7,7 +7,7 @@ const menuItems = menu.querySelectorAll(".resources__menu__item");
 let state = {
     resources: {
         menu: {
-            activeItem: "",
+            activeItem: "modernize",
             hoveredItem: ""
         }
     }

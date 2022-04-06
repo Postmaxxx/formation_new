@@ -96,10 +96,11 @@ function changeMenuType(newType) {
 
 
 document.addEventListener("scroll", (e) => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 600) {
         changeMenuType('sticky');
     } 
-    if (window.scrollY < 20) {
+    if (window.scrollY < 500) {
         changeMenuType('classic')
     }
+
 })

@@ -44,7 +44,7 @@
             & .filter__sub {
                 background: #FFFFFF;
                 box-shadow: none;
-                opacity: 0.97;
+                opacity: 1;
                 margin-top: 0px;
 
                 //border: 2px solid blue;
@@ -93,7 +93,7 @@
     
 
                         &.filter__sub__item_selected {
-                            background-color: #4643f1;
+                            background-color: #3361BB;
                         }
 
                         &:hover {
