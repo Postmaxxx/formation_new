@@ -6,9 +6,21 @@
      flex-wrap: wrap;
      //border: 3px solid red;
 
+    @include respond-to(sm) {
+        justify-content: space-around;
+    }
+
      &__item {
          width: 30%;
          margin-top: 80px;
+
+        @include respond-to(sm) {
+            width: 42%;
+        }
+
+        @include respond-to(xs) {
+            width: 100%;
+        }
 
 
          //height: 100px;
@@ -20,15 +32,15 @@
          }
 
          & h3 {
-             margin-top: 18px;
-             font-weight: 700;
+            margin-top: 18px;
+             \font-weight: 700;
             font-size: 20px;
             line-height: 37px;
          }
 
          & p {
-             margin-top: 8px;
-             font-weight: 400;
+            margin-top: 8px;
+            font-weight: 400;
             font-size: 16px;
             line-height: 23px;
          }
@@ -48,6 +60,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+
+
+
 
     & .resources__preview__page {
         width: 37px;
@@ -63,6 +79,10 @@
         cursor: pointer;
         border: none;
 
+        @include respond-to(xs) {
+            margin: 0 8px;
+
+        }
 
         &_selected {
             border: 1px solid black;
@@ -71,5 +91,10 @@
 
     & .resources__preview__page-next {
         width: auto;
+
+        @include respond-to(sm) {
+            display: none;
+        }
+
     }
 }

@@ -23,7 +23,7 @@
             {% endif %}
         {% else %}
             {% if page == 2 and pagesTotal > 5 and currentPage > 3 %}
-                <p>...</p>
+                <span>...</span>
             {% endif %}
             
             {% if page == currentPage-1 or page == currentPage or page == currentPage+1 %}
@@ -35,7 +35,7 @@
             {% endif %}
 
             {% if page == pagesTotal-1 and pagesTotal > 5 and currentPage < pagesTotal-2 %}
-                <p>...</p>
+                <span>...</span>
             {% endif %}
 
         {% endif %}

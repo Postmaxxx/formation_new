@@ -10,6 +10,11 @@
     justify-content: space-between;
     //border: 1px solid red;
 
+    @include respond-to(sm) {
+        flex-direction: column;
+    }
+
+
 
     & .resources__block_hero__span {
         margin-top: 18px;
@@ -33,11 +38,21 @@
         width: 54%;
         //border: 1px solid blue;
 
+        @include respond-to(sm) {
+            width: 100%;
+        }
+
         & .resources__block_hero__header {
             font-weight: 700;
             font-size: 48px;
             line-height: 67px;
             max-width: 490px;
+
+            @include respond-to(md) {
+                font-size: 36px;
+                line-height: 48px;
+                max-width: 390px;
+            }
         }
 
 
@@ -94,6 +109,11 @@
         width: 40%;
         //border: 1px solid blue;
         margin-top: 20px;
+
+        @include respond-to(sm) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
 
         & .resources__block_hero__item {
             margin-top: 28px;
