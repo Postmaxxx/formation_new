@@ -5,11 +5,40 @@
     color: #000000;
     font-style: normal;
 
+    @include respond-to(xs) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+
+    }
+
+    &:nth-child(1) {
+        margin-top: 0;
+    }
+
 
     &__header {
         font-weight: 700;
         font-size: 60px;
         line-height: 65px;
+
+        @include respond-to(md) {
+            font-size: 45px;
+            line-height: 45px;
+        }
+
+        @include respond-to(xs) {
+            font-size: 24px;
+            line-height: 36px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 220px;
+            width: auto;
+            margin-top: 54px;
+        }
     }
 
     &__link {
@@ -19,6 +48,18 @@
         font-size: 22px;
         line-height: 45px;
         color: #535353;
+
+        @include respond-to(md) {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        @include respond-to(xs) {
+            font-size: 16px;
+            line-height: 45px;
+            display: block;
+            margin-top: 0;
+        }
     }
 
     &__content {
@@ -30,8 +71,20 @@
         justify-content: space-between;
         color: #000000;
 
+
+        @include respond-to(xs) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+
         & img {
             width: 100%;
+
+            @include respond-to(xs) {
+                margin-top: 55px;
+            }
         }
 
         h3 {
@@ -48,22 +101,39 @@
         &__left {
             width: 60%;
             //border: 1px solid blue;
-            
+
+            @include respond-to(xs) {
+                width: 100%;
+            }
 
             & h3 {
                 font-size: 28px;
                 line-height: 45px;
+
+                @include respond-to(md) {
+                    font-size: 22px;
+                    line-height: 35px;
+                }
             }
 
             & p {
                 font-size: 20px;
                 line-height: 29px;
+
+                @include respond-to(md) {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
             }
         }
 
         &__right {
             width: 35%;
             //border: 1px solid red;
+
+            @include respond-to(xs) {
+                width: 100%;
+            }
 
             & h3 {
                 font-size: 20px;
