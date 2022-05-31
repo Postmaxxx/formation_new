@@ -5,7 +5,7 @@
     color: #000000;
     font-style: normal;
 
-    @include respond-to(xs) {
+    @include respond-to(sm) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,7 +28,7 @@
             line-height: 45px;
         }
 
-        @include respond-to(xs) {
+        @include respond-to(sm) {
             font-size: 24px;
             line-height: 36px;
             display: inline-block;
@@ -54,7 +54,7 @@
             line-height: 30px;
         }
 
-        @include respond-to(xs) {
+        @include respond-to(sm) {
             font-size: 16px;
             line-height: 45px;
             display: block;
@@ -64,6 +64,7 @@
 
     &__content {
         //border: 1px solid green;
+
         margin-top: 55px;
         width: 100%;
         display: flex;
@@ -72,8 +73,8 @@
         color: #000000;
 
 
-        @include respond-to(xs) {
-            display: flex;
+        @include respond-to(sm) {
+            //display: flex;
             flex-direction: column;
             margin-top: 10px;
         }
@@ -82,7 +83,7 @@
         & img {
             width: 100%;
 
-            @include respond-to(xs) {
+            @include respond-to(sm) {
                 margin-top: 55px;
             }
         }
@@ -102,7 +103,7 @@
             width: 60%;
             //border: 1px solid blue;
 
-            @include respond-to(xs) {
+            @include respond-to(sm) {
                 width: 100%;
             }
 
@@ -131,7 +132,7 @@
             width: 35%;
             //border: 1px solid red;
 
-            @include respond-to(xs) {
+            @include respond-to(sm) {
                 width: 100%;
             }
 

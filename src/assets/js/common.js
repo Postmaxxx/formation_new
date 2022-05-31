@@ -152,6 +152,28 @@
 			loop: true
 		});
 
+		$('.life-formation__slider .owl-carousel').owlCarousel({
+			nav: false,
+			items: 1,
+			dots: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			animateIn: 'fadeIn',
+			animateOut: 'fadeOut',
+			loop: true
+		});
+
+		$('.employee-spotlight__slider .owl-carousel').owlCarousel({
+			nav: false,
+			items: 1,
+			dots: true,
+			autoplay: false,
+			autoplayTimeout: 5000,
+			animateIn: 'fadeIn',
+			animateOut: 'fadeOut',
+			loop: true
+		});
+
 		$('.header').sticky({topSpacing:0});
 
 		if(window.innerWidth>767) {
