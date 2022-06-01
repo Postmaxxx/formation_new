@@ -5,29 +5,45 @@ const menus = document.querySelectorAll(".nav__items");
 const arrows = document.querySelectorAll(".nav-arrow");
 const subMenus = document.querySelectorAll(".nav-sub");
 const mobileSubMenus = mobileNav.querySelectorAll(".mobile-nav-sub");
+
+/*
 const subMenuCompany = nav.querySelector(".nav-sub_company");
-const mobileSubMenuCompany = mobileNav.querySelector(".mobile-nav-sub_company");
 const subMenuResources = nav.querySelector(".nav-sub_resources");
+const mobileSubMenuCompany = mobileNav.querySelector(".mobile-nav-sub_company");
 const mobileSubMenuResources = mobileNav.querySelector(".mobile-nav-sub_resources");
+
 const mobileCompanyHeader = mobileNav.querySelector(".mobile-nav__link_company");
 const mobileResourcesHeader = mobileNav.querySelector(".mobile-nav__link_resources");
-
+*/
 
 let state = {
     nav: {
-        activeItem: "",
+        activeSub: "",
         type: "classic",
     }
 }
  
 
 function redrawSubNav(submenuToShow) {
+    
     subMenus.forEach((menu) => {
-        menu.style.transform = `scaleY(0)`;
+        if (menu === submenuToShow) {
+            menu.classList.add('selected')
+        } else {
+            menu.classList.remove('selected')
+        }
     })
-    mobileSubMenus.forEach((menu) => {
-        menu.style.maxHeight = `0`;
+
+    mobileSubMenus.forEach((submenu) => {
+        if (submenu === submenuToShow) {
+            submenu.classList.add('selected')
+        } else {
+            submenu.classList.remove('selected')
+        }
     })
+
+
+    /*
     mobileCompanyHeader.style.borderBottom = `none`;
     mobileResourcesHeader.style.borderBottom = `none`;
     if (submenuToShow === "company") {
@@ -45,13 +61,15 @@ function redrawSubNav(submenuToShow) {
     } else {
         header.classList.remove("header_submenu");
     }
+    */
 
 }
 
 
 
-function redrawNav(selected) {
-    state.nav.activeItem = selected;
+function redrawNav(selected, target) {
+    state.nav.activeSub = selected;
+    //console.log(state.nav.activeSub);
     arrows.forEach((el) => {
         if (selected === el.dataset.item || selected === el.parentNode.dataset.item) {
             el.style.transform = `rotate(225deg) scale(-1, -1)`;
@@ -59,7 +77,7 @@ function redrawNav(selected) {
             el.style.transform = `rotate(225deg)`;
         }
     })
-    redrawSubNav(selected);
+    state.nav.activeSub ? redrawSubNav(target) : redrawSubNav(null);
     if (state.nav.type === 'sticky' ) {
         nav.parentNode.classList.add('sticky');
         subMenus.forEach(el => el.classList.add('sticky'));
@@ -76,12 +94,12 @@ function redrawNav(selected) {
 
 menus.forEach((menu) => {
     menu.addEventListener("click", (e) => {
-        if (e.target.dataset.item) {
-            e.target.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.dataset.item;
-        } else {
-            e.target.parentNode.dataset.item === state.nav.activeItem ? state.nav.activeItem = "" : state.nav.activeItem = e.target.parentNode.dataset.item;
+        if (e.target.querySelector('.nav-sub') || e.target.querySelector('.mobile-nav-sub')) {
+            if (e.target.dataset.item) {
+                e.target.dataset.item === state.nav.activeSub ? state.nav.activeSub = "" : state.nav.activeSub = e.target.dataset.item;
+                e.target.querySelector('.nav-sub') ? redrawNav(state.nav.activeSub, e.target.querySelector('.nav-sub')) : redrawNav(state.nav.activeSub, e.target.querySelector('.mobile-nav-sub'));
+            } 
         }
-        redrawNav(state.nav.activeItem)
     })
 })
 
@@ -90,7 +108,7 @@ menus.forEach((menu) => {
 function changeMenuType(newType) {
     if (state.nav.type !== newType) {
         state.nav.type = newType;
-        redrawNav(state.nav.activeItem);
+        redrawNav(state.nav.activeSub);
     }
 }
 
