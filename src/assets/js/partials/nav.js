@@ -19,7 +19,7 @@ let state = {
         type: "classic",
     }
 }
-
+ 
 
 function redrawSubNav(submenuToShow) {
     subMenus.forEach((menu) => {
