@@ -18,7 +18,7 @@
     }
 
 
-    &__header {
+    & > h2 {
         font-weight: 700;
         font-size: 60px;
         line-height: 65px;
@@ -41,7 +41,7 @@
         }
     }
 
-    &__link {
+    & > a {
         display: inline-block;
         margin-top: 28px;
         font-weight: 500;
@@ -62,9 +62,7 @@
         }
     }
 
-    &__content {
-        //border: 1px solid green;
-
+    & > div {
         margin-top: 55px;
         width: 100%;
         display: flex;
@@ -88,7 +86,7 @@
             }
         }
 
-        h3 {
+        & h3 {
             font-weight: 700;
             margin-top: 27px;
         }
@@ -99,9 +97,12 @@
             margin-top: 16px;
         }
 
-        &__left {
+        /*& a {
+            color: #000;
+        }*/
+
+        & div:nth-child(1) {
             width: 60%;
-            //border: 1px solid blue;
 
             @include respond-to(sm) {
                 width: 100%;
@@ -128,9 +129,8 @@
             }
         }
 
-        &__right {
+        & div:nth-child(2) {
             width: 35%;
-            //border: 1px solid red;
 
             @include respond-to(sm) {
                 width: 100%;
@@ -147,4 +147,8 @@
             }
         }
     }
+}
+
+.resources-block__item {
+    color: #000;
 }

@@ -58,14 +58,12 @@
     </div>
   </section>
 
-  <div class="container">
-    {% include "components/_blog_share.twig" with {shares: blog__share_data } %}
-  </div>
+
 
 
   <div class="container">
       <section class="blog-content__section">
-        {% include "components/_blog_nav.twig" %}
+        {% include "components/_blog_nav.twig" with {shares: blog__share_data } %}
         {% include "components/_blog_content.twig" with {hero: blog__hero_data} %}
       </section>
       {% include "components/_related_posts.twig" with {posts }  %}
@@ -80,7 +78,3 @@
   </section>
 {% endblock %}
  
-
-{% block scripts %}
-  <script type="module" src="/assets/js/partials/blog_nav.min.js"></script>
-{% endblock %}

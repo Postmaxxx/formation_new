@@ -1,4 +1,4 @@
-const menu = document.querySelector(".resources__menu");
+/*const menu = document.querySelector(".resources__menu");
 const search = document.querySelector(".resources__search");
 const menuItems = menu.querySelectorAll(".resources__menu__item");
 
@@ -7,8 +7,8 @@ const menuItems = menu.querySelectorAll(".resources__menu__item");
 let state = {
     resources: {
         menu: {
-            activeItem: "modernize",
-            hoveredItem: ""
+            activeItem: "",
+            hoveredItem: "modernize"
         }
     }
 }
@@ -17,7 +17,7 @@ let state = {
 function changeMenuStyles() {
     menuItems.forEach((item) => {
         //if (item.dataset.category === state.resources.menu.activeItem || (item.dataset.category === state.resources.menu.hoveredItem && state.resources.menu.activeItem === "")) {
-        if (item.dataset.partition === state.resources.menu.activeItem || (item.dataset.partition === state.resources.menu.hoveredItem && state.resources.menu.activeItem === "")) {
+        if (item.dataset.partition === state.resources.menu.hoveredItem || (item.dataset.partition === state.resources.menu.hoveredItem && state.resources.menu.hoveredItem === "")) {
             item.classList.add('resources__menu__item_selected')
         } else {
             item.classList.remove('resources__menu__item_selected')
@@ -44,7 +44,7 @@ menu.addEventListener('mouseout', (e) => {
     changeMenuStyles();
 })
 
-
+/*
 menu.addEventListener('click', (e) => {
     if (e.target.dataset.partition) {
         state.resources.menu.activeItem = e.target.dataset.partition;
@@ -54,4 +54,4 @@ menu.addEventListener('click', (e) => {
     }
     changeMenuStyles();
 })
-
+*/

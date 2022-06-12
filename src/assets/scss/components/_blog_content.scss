@@ -1,11 +1,11 @@
 .blog__content {
     width: 73%;
-    font-family: 'HelveticaNeueCyr';
-    font-style: normal;
+    font-family: 'SourceSansPro';
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
     color: #000000;
+    margin-top: 150px;
 
     @include respond-to(sm) {
         width: 95%;
@@ -16,20 +16,7 @@
         line-height: 20px;
     }
 
-    &__h2 {
-        margin-top: 46px;
-
-        @include respond-to(md) {
-            margin-top: 30px;
-        }
-    }
-
-    &__h3 {
-        display: inline-block;
-        
-    }
-
-    &__text {
+    p {
         margin-top: 46px;
 
         @include respond-to(md) {
@@ -41,35 +28,62 @@
         }
     }
 
-    &__ul {
+    h2 {
+        margin-top: 46px;
+        font-family: 'HelveticaNeueCyr';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+
+        @include respond-to(md) {
+            margin-top: 30px;
+        }
+    }
+
+    h3 {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        //color: red;
+    }
+
+    & strong {
+        font-weight: 700;
+    }
+
+    ul {
         margin-left: 25px;
 
         @include respond-to(md) {
             margin-top: 30px;
         }
 
-        &__item {
+        li {
             margin-top: 46px;
             list-style-type: disc;
             padding-left: 0px;
             //list-style-position: inside;
 
+            &::marker {
+                font-family: 'HelveticaNeueCyr';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;
+            }
         }
     }
 
-
-
-    &__ol {
-
-        &__item {
+    ol {
+        
+        & > li {
             margin-top: 46px;
             list-style-position: inside;
 
             &::marker {
-                font-family: 'HelveticaNeueCyr';
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 30px;
+                font-size: 22px;
+                font-weight: 700;
             }
 
             @include respond-to(md) {
@@ -77,23 +91,24 @@
             }
                 
         }
+        
         & p:first-of-type {
             margin-top: 0;
         }
 
-    }
-
-
-    &__img {
-        margin-top: 46px;
-        width: 60%;
-
-        @include respond-to(md) {
-            margin-top: 30px;
+        img {
+            margin-top: 46px;
+            width: 60%;
+    
+            @include respond-to(md) {
+                margin-top: 30px;
+            }
+    
+            @include respond-to(sm) {
+                width: 100%;
+            }
         }
 
-        @include respond-to(sm) {
-            width: 100%;
-        }
     }
+
 }

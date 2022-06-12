@@ -1,6 +1,6 @@
 <div class="resources__block">
-    <h2 class="resources__block__header">{{ block.main_header }}</h2>
-    <a href={{ block.link_to }} class="resources__block__link">Read More &#8594</a>
+    <h2>{{ block.main_header }}</h2>
+    <a href={{ block.link_to }}>Read More &#8594</a>
     <div class="resources__block__content">
         <div class="resources__block__content__left">
             {% include "./_resources-block-item.twig" with {resource: block.resources[0]} %} 
